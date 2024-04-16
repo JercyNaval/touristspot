@@ -1,0 +1,141 @@
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Century', sans-serif;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  display: inline;
+}
+
+ul li a {
+  text-decoration: none;
+  color: coral;
+  padding: 10px 34px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+ul li a:hover {
+  background-color: lightpink;
+  color: black;
+}
+.navbar {
+  display: flex;  /* Establishes a flex container */
+  justify-content: space-around;  /* Distributes space around the items */
+  align-items: center;  /* Aligns items vertically in the center */
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown button {
+  background: none;
+  color: coral;
+  padding: 15px 20px;
+  font-size: 20px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.dropdown .content {
+  display: none;
+  font-size: 15px;
+  position: absolute;
+  background-color: aqua;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .content {
+  display: block;
+  
+}
+
+.dropdown a {
+
+  color: coral;
+  padding: 35px 35px;
+  text-decoration: none;
+  display: block;
+}
+.culture {
+font-size: 20px;
+}
+.dropdown a:hover {
+  background-color: lightpink;
+  color: black;
+}
+
+.title h1 {
+  font-size: 2em;
+  color: #170f0f;
+}
+
+.button .btn {
+  border: 1px solid coral;
+  padding: 10px 15px;
+  color: red;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.5s ease;
+}
+
+.button .btn:hover {
+  background-color: aqua;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .title h1, .button .btn {
+      font-size: 1em;
+  }
+
+  .dropdown button {
+      padding: 10px 20px;
+  }
+}
+.main {
+  max-width: 1170px;
+  margin: auto;
+  display: flex; /* Ensures content is flexibly displayed */
+  align-items: center; /* Aligns children vertically in the middle */
+  justify-content: space-between; /* Space between the logo and the potentially following elements */
+}
+
+.logo {
+  display: flex; /* Makes direct children of .logo (img and h1) line up in a row */
+  align-items: center; /* Center items vertically */
+}
+
+.logo img {
+  width: 150px; /* This can also be moved to CSS for consistency */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Adds some space between the logo and the title */
+}
+
+.logo h1 {
+  font-size: 40px; /* Adjust the size as needed */
+  color: #000; /* Set the color as needed */
+}
